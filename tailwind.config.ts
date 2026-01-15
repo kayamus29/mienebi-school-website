@@ -96,10 +96,45 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "shimmer-slide": "shimmer-slide var(--speed) ease-in-out infinite alternate",
+        "spin-around": "spin-around calc(var(--speed) * 2) infinite linear",
+      },
+      keyframes: {
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+        "counter": {
+          from: { "--num": "0" },
+          to: { "--num": "var(--target)" },
+        },
+        "spin-around": {
+          "0%": {
+            transform: "translateZ(0) rotate(0)",
+          },
+          "15%, 35%": {
+            transform: "translateZ(0) rotate(90deg)",
+          },
+          "65%, 85%": {
+            transform: "translateZ(0) rotate(270deg)",
+          },
+          "100%": {
+            transform: "translateZ(0) rotate(360deg)",
+          },
+        },
+        "shimmer-slide": {
+          to: {
+            transform: "translate(calc(100cqw - 100%), 0)",
+          },
+        },
       },
       boxShadow: {
         'elegant': '0 10px 15px -3px hsl(220 60% 20% / 0.1), 0 4px 6px -4px hsl(220 60% 20% / 0.1)',
-        'gold': '0 4px 14px 0 hsl(45 90% 55% / 0.3)',
+        'gold': '0 4px 14px 0 hsl(195 85% 60% / 0.35)',
         'card': '0 4px 6px -1px hsl(220 60% 20% / 0.1), 0 2px 4px -2px hsl(220 60% 20% / 0.1)',
       },
     },

@@ -10,7 +10,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 z-0">
         <img
           src={heroImage}
-          alt="Students learning at Bright Horizon Academy"
+          alt="Students engaged in learning at MIENEBI International School in Gwarimpa Estate, Abuja"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-primary/60" />
@@ -21,26 +21,22 @@ const HeroSection = () => {
       <div className="absolute top-20 right-20 w-72 h-72 bg-secondary/20 rounded-full blur-3xl animate-pulse-slow hidden lg:block" />
       <div className="absolute bottom-20 left-20 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-float hidden lg:block" />
 
-      <div className="container relative z-10 py-20">
+      <div className="container relative z-10 py-16 sm:py-20">
         <div className="max-w-3xl">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-secondary/20 backdrop-blur-sm text-primary-foreground px-4 py-2 rounded-full mb-6 animate-fade-in-down">
             <span className="w-2 h-2 bg-secondary rounded-full animate-pulse" />
-            <span className="text-sm font-medium">Admissions Open for 2025-26</span>
+            <span className="text-sm font-medium">Admissions Open for MIENEBI International School 2024/2025</span>
           </div>
 
           {/* Main Heading */}
           <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-primary-foreground leading-tight mb-6 animate-fade-in-up">
-            Nurturing Minds,{" "}
-            <span className="text-gradient">Building Futures</span>
+            MIENEBI International School: Offering British and Nigerian Curriculum in Abuja
           </h1>
 
           {/* Subtitle */}
           <p className="text-lg sm:text-xl text-primary-foreground/80 leading-relaxed mb-8 max-w-2xl animate-fade-in-up stagger-2">
-            At Bright Horizon Academy, we believe every child has the potential
-            for greatness. Our holistic approach to education combines academic
-            excellence with character development, preparing students for a
-            successful future.
+            We offer quality education at all levels in Gwarimpa Estate, FCT Abuja.
           </p>
 
           {/* CTA Buttons */}
@@ -51,34 +47,22 @@ const HeroSection = () => {
               className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold text-lg px-8 shadow-gold group"
             >
               <Link to="/admissions">
-                Apply for Admission
+                Apply for Admission to MIENEBI International School
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </Button>
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="border-2 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-semibold text-lg px-8"
-            >
-              <Link to="/about" className="flex items-center gap-2">
-                <span className="w-10 h-10 rounded-full bg-primary-foreground/20 flex items-center justify-center">
-                  <Play className="h-4 w-4 ml-0.5" />
-                </span>
-                Watch Our Story
-              </Link>
-            </Button>
+            // Removed secondary outline button linking to /about
           </div>
 
           {/* Quick Stats */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-16 pt-8 border-t border-primary-foreground/20 animate-fade-in-up stagger-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mt-12 sm:mt-16 pt-6 sm:pt-8 border-t border-primary-foreground/20 animate-fade-in-up stagger-4">
             {[
               { value: "39+", label: "Years of Excellence" },
               { value: "2,500+", label: "Students Enrolled" },
               { value: "150+", label: "Expert Teachers" },
               { value: "98%", label: "Success Rate" },
             ].map((stat, index) => (
-              <div key={index} className="text-center sm:text-left">
+              <div key={index} className="text-center">
                 <div className="font-serif text-3xl sm:text-4xl font-bold text-secondary mb-1">
                   {stat.value}
                 </div>

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, ChevronDown, GraduationCap, Phone, Mail } from "lucide-react";
+import { Menu, X, ChevronDown, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
@@ -11,6 +11,7 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
+import { MenuToggleIcon } from "@/components/ui/menu-toggle-icon";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -25,14 +26,26 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Manage focus when mobile menu opens/closes
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      const firstLink = document.querySelector('#mobile-menu a') as HTMLElement | null;
+      firstLink?.focus();
+    }
+  }, [isMobileMenuOpen]);
+
+  // Close mobile menu on route change for consistency
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [location.pathname]);
+
   const navItems = [
     { label: "Home", path: "/" },
     { label: "About Us", path: "/about" },
-    { label: "Academics", path: "/academics" },
     { label: "Admissions", path: "/admissions" },
-    { label: "Faculty", path: "/faculty" },
-    { label: "News & Events", path: "/news" },
-    { label: "Gallery", path: "/gallery" },
+    { label: "Blog", path: "/news" },
+    { label: "Services", path: "/services" },
+    { label: "Career", path: "/career" },
     { label: "Contact", path: "/contact" },
   ];
 
@@ -44,22 +57,18 @@ const Header = () => {
       <div className="bg-primary text-primary-foreground py-2 hidden md:block">
         <div className="container flex justify-between items-center text-sm">
           <div className="flex items-center gap-6">
-            <a href="tel:+1234567890" className="flex items-center gap-2 hover:text-secondary transition-colors">
+            <a href="tel:08035983003" className="flex items-center gap-2 hover:text-secondary transition-colors">
               <Phone className="h-4 w-4" />
-              <span>+1 (234) 567-890</span>
+              <span>08035983003</span>
             </a>
-            <a href="mailto:info@brighthorizon.edu" className="flex items-center gap-2 hover:text-secondary transition-colors">
+            <a href="mailto:mienebisch@gmail.com" className="flex items-center gap-2 hover:text-secondary transition-colors">
               <Mail className="h-4 w-4" />
-              <span>info@brighthorizon.edu</span>
+              <span>mienebisch@gmail.com</span>
             </a>
           </div>
           <div className="flex items-center gap-4">
             <Link to="/portal" className="hover:text-secondary transition-colors">
-              Student Portal
-            </Link>
-            <span className="text-primary-foreground/50">|</span>
-            <Link to="/portal" className="hover:text-secondary transition-colors">
-              Parent Portal
+              Portal Login
             </Link>
           </div>
         </div>
@@ -78,17 +87,17 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
             <div className="relative">
-              <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center group-hover:scale-105 transition-transform">
-                <GraduationCap className="h-7 w-7 text-secondary" />
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center group-hover:scale-105 transition-transform overflow-hidden ring-1 ring-primary/30">
+                <img src="/logo.png" alt="MIENEBI International School Logo" className="h-12 w-12 object-cover" />
               </div>
               <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-secondary rounded-full" />
             </div>
-            <div className="hidden sm:block">
-              <h1 className="font-serif text-xl font-bold text-primary leading-tight">
-                Bright Horizon
+            <div className="block">
+              <h1 className="font-serif text-base sm:text-xl font-bold text-primary leading-tight">
+                MIENEBI International School
               </h1>
-              <p className="text-xs text-muted-foreground font-medium tracking-wider uppercase">
-                Academy
+              <p className="hidden md:block text-xs text-muted-foreground font-medium tracking-wider uppercase">
+                The Future Leaders Leading the Way
               </p>
             </div>
           </Link>
@@ -123,15 +132,15 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
+            type="button"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="lg:hidden p-2 rounded-md hover:bg-accent transition-colors"
-            aria-label="Toggle menu"
+            aria-label="Toggle navigation menu"
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-menu"
+            aria-haspopup="menu"
           >
-            {isMobileMenuOpen ? (
-              <X className="h-6 w-6 text-primary" />
-            ) : (
-              <Menu className="h-6 w-6 text-primary" />
-            )}
+            <MenuToggleIcon open={isMobileMenuOpen} className="h-6 w-6 text-primary" duration={300} />
           </button>
         </div>
 
@@ -141,6 +150,12 @@ const Header = () => {
             "lg:hidden absolute top-full left-0 right-0 bg-card border-t shadow-lg transition-all duration-300 overflow-hidden",
             isMobileMenuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
           )}
+          id="mobile-menu"
+          role="navigation"
+          aria-label="Mobile"
+          onKeyDown={(e) => {
+            if (e.key === 'Escape') setIsMobileMenuOpen(false);
+          }}
         >
           <nav className="container py-4 flex flex-col gap-1">
             {navItems.map((item) => (

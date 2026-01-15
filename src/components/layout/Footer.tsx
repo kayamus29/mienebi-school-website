@@ -16,28 +16,24 @@ import { Input } from "@/components/ui/input";
 
 const Footer = () => {
   const quickLinks = [
+    { label: "Home", path: "/" },
     { label: "About Us", path: "/about" },
-    { label: "Academics", path: "/academics" },
     { label: "Admissions", path: "/admissions" },
-    { label: "Faculty & Staff", path: "/faculty" },
-    { label: "News & Events", path: "/news" },
-    { label: "Gallery", path: "/gallery" },
+    { label: "Blog", path: "/news" },
+    { label: "Contact Us", path: "/contact" },
   ];
 
   const usefulLinks = [
-    { label: "Student Portal", path: "/portal" },
-    { label: "Parent Portal", path: "/portal" },
-    { label: "Downloads", path: "/downloads" },
-    { label: "Academic Calendar", path: "/academics" },
-    { label: "Fee Structure", path: "/admissions" },
+    { label: "Home", path: "/" },
+    { label: "About Us", path: "/about" },
+    { label: "Admissions", path: "/admissions" },
+    { label: "Blog", path: "/news" },
     { label: "Contact Us", path: "/contact" },
   ];
 
   const socialLinks = [
-    { icon: Facebook, href: "#", label: "Facebook" },
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: Youtube, href: "#", label: "YouTube" },
+    { icon: Facebook, href: "https://www.facebook.com/Mienebischool", label: "Facebook" },
+    { icon: Instagram, href: "https://www.instagram.com/Mienebisch", label: "Instagram" },
   ];
 
   return (
@@ -79,15 +75,14 @@ const Footer = () => {
                 <GraduationCap className="h-7 w-7 text-secondary" />
               </div>
               <div>
-                <h2 className="font-serif text-xl font-bold">Bright Horizon</h2>
+                <h2 className="font-serif text-xl font-bold">MIENEBI International School</h2>
                 <p className="text-xs text-primary-foreground/70 tracking-wider uppercase">
-                  Academy
+                  The Future Leaders Leading the Way
                 </p>
               </div>
             </Link>
             <p className="text-primary-foreground/70 mb-6 leading-relaxed">
-              Nurturing minds, building futures. Providing quality education since 1985
-              with a commitment to academic excellence and character development.
+              We Offer British and Nigerian Curriculum. We offer quality education at all levels.
             </p>
             <div className="flex gap-3">
               {socialLinks.map((social) => (
@@ -155,25 +150,34 @@ const Footer = () => {
               <li className="flex gap-3">
                 <MapPin className="h-5 w-5 text-secondary shrink-0 mt-0.5" />
                 <span className="text-primary-foreground/70">
-                  123 Education Lane, Knowledge City, State 12345
+                  Ps. Egure Street, Off Wole Soyinka Street, 2nd Avenue, Behind Glass House, Gwarimpa Estate, FCT Abuja
                 </span>
               </li>
               <li className="flex gap-3">
                 <Phone className="h-5 w-5 text-secondary shrink-0" />
                 <a
-                  href="tel:+1234567890"
+                  href="tel:08035983003"
                   className="text-primary-foreground/70 hover:text-secondary transition-colors"
                 >
-                  +1 (234) 567-890
+                  08035983003
+                </a>
+              </li>
+              <li className="flex gap-3">
+                <Phone className="h-5 w-5 text-secondary shrink-0" />
+                <a
+                  href="tel:09095201652"
+                  className="text-primary-foreground/70 hover:text-secondary transition-colors"
+                >
+                  09095201652
                 </a>
               </li>
               <li className="flex gap-3">
                 <Mail className="h-5 w-5 text-secondary shrink-0" />
                 <a
-                  href="mailto:info@brighthorizon.edu"
+                  href="mailto:mienebisch@gmail.com"
                   className="text-primary-foreground/70 hover:text-secondary transition-colors"
                 >
-                  info@brighthorizon.edu
+                  mienebisch@gmail.com
                 </a>
               </li>
               <li className="flex gap-3">
@@ -191,7 +195,7 @@ const Footer = () => {
       <div className="border-t border-primary-foreground/10">
         <div className="container py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/60">
           <p>
-            © {new Date().getFullYear()} Bright Horizon Academy. All rights reserved.
+            © {new Date().getFullYear()} MIENEBI International School. All rights reserved.
           </p>
           <div className="flex gap-6">
             <Link to="/privacy" className="hover:text-secondary transition-colors">

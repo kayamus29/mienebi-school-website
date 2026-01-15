@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
+import { Helmet } from "react-helmet-async";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -42,19 +43,18 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Our Address",
-      content: "123 Education Lane, Knowledge City, State 12345",
+      content: "Ps. Egure Street, Off Wole Soyinka Street, 2nd Avenue, Behind Glass House, Gwarimpa Estate, FCT Abuja",
     },
     {
       icon: Phone,
       title: "Phone Numbers",
-      content: "+1 (234) 567-890",
-      subContent: "+1 (234) 567-891",
+      content: "08035983003",
+      subContent: "09095201652",
     },
     {
       icon: Mail,
       title: "Email Address",
-      content: "info@brighthorizon.edu",
-      subContent: "admissions@brighthorizon.edu",
+      content: "mienebisch@gmail.com",
     },
     {
       icon: Clock,
@@ -66,6 +66,11 @@ const Contact = () => {
 
   return (
     <Layout>
+      <Helmet>
+        <title>Contact | MIENEBI International School</title>
+        <meta name="description" content="Contact MIENEBI International School, Abuja. Address, phone, email, and office hours." />
+        <meta property="og:title" content="Contact | MIENEBI International School" />
+      </Helmet>
       {/* Hero Section */}
       <section className="bg-primary text-primary-foreground py-20 lg:py-28 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
@@ -81,10 +86,10 @@ const Contact = () => {
               <span className="text-sm font-medium">Contact Us</span>
             </div>
             <h1 className="font-serif text-4xl lg:text-5xl xl:text-6xl font-bold mb-6">
-              Get in Touch With Us
+              Contact MIENEBI International School in Gwarimpa Estate, Abuja
             </h1>
             <p className="text-lg text-primary-foreground/80 leading-relaxed">
-              Have questions about admissions, academics, or anything else?
+              Have questions about admissions, academics, or anything else at MIENEBI International School?
               We'd love to hear from you. Reach out and we'll respond as soon
               as possible.
             </p>
@@ -99,7 +104,7 @@ const Contact = () => {
             {/* Contact Form */}
             <div className="lg:col-span-3">
               <h2 className="font-serif text-2xl lg:text-3xl font-bold text-primary mb-6">
-                Send Us a Message
+                Send a Message to MIENEBI International School
               </h2>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid sm:grid-cols-2 gap-6">
@@ -192,7 +197,7 @@ const Contact = () => {
             {/* Contact Info */}
             <div className="lg:col-span-2">
               <h2 className="font-serif text-2xl lg:text-3xl font-bold text-primary mb-6">
-                Contact Information
+                MIENEBI International School Contact Information
               </h2>
               <div className="space-y-6">
                 {contactInfo.map((item, index) => (
@@ -223,7 +228,7 @@ const Contact = () => {
               {/* Quick Links */}
               <div className="mt-8 bg-primary text-primary-foreground rounded-xl p-6">
                 <h3 className="font-serif text-lg font-bold mb-4">
-                  Department Contacts
+                  MIENEBI International School Department Contacts
                 </h3>
                 <ul className="space-y-3 text-sm">
                   <li className="flex justify-between">
@@ -258,7 +263,7 @@ const Contact = () => {
               Interactive Google Map would be embedded here
             </p>
             <p className="text-sm text-muted-foreground/70">
-              123 Education Lane, Knowledge City, State 12345
+              Ps. Egure Street, Off Wole Soyinka Street, 2nd Avenue, Behind Glass House, Gwarimpa Estate, FCT Abuja
             </p>
           </div>
         </div>

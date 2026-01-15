@@ -56,10 +56,10 @@ const EventsSection = () => {
               <span className="text-sm font-medium">Upcoming Events</span>
             </div>
             <h2 className="font-serif text-3xl lg:text-4xl font-bold text-primary mb-6">
-              Don't Miss Out on Our Events
+              Don't Miss Out on Our Events at MIENEBI International School in Abuja
             </h2>
             <p className="text-muted-foreground mb-8">
-              Stay connected with our vibrant school community through various
+              Stay connected with MIENEBI International School's vibrant community through various
               events, workshops, and celebrations throughout the year.
             </p>
 

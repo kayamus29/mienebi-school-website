@@ -33,11 +33,11 @@ const GalleryPreview = () => {
               <span className="text-sm font-medium">Photo Gallery</span>
             </div>
             <h2 className="font-serif text-3xl lg:text-4xl xl:text-5xl font-bold mb-4">
-              Glimpses of Campus Life
+              MIENEBI International School Photo Gallery: Glimpses of Our Abuja Campus Life
             </h2>
             <p className="text-primary-foreground/70 max-w-xl">
               Explore moments of learning, friendship, and growth captured across
-              our vibrant campus.
+              our vibrant campus at MIENEBI International School.
             </p>
           </div>
           <Button
@@ -65,7 +65,7 @@ const GalleryPreview = () => {
               <div className={`${index === 0 ? "aspect-square" : "aspect-[4/3]"}`}>
                 <img
                   src={image.src}
-                  alt={image.alt}
+                  alt={`${image.alt} at MIENEBI International School Abuja`}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
               </div>

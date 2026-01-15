@@ -2,8 +2,10 @@ import Layout from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 import { ArrowRight, Target, Eye, Heart, Award, Users, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import StaffSection from "@/components/about/StaffSection";
 import aboutImage from "@/assets/gallery-1.jpg";
 import principalImage from "@/assets/principal.jpg";
+import { Helmet } from "react-helmet-async";
 
 const values = [
   {
@@ -31,6 +33,11 @@ const values = [
 const About = () => {
   return (
     <Layout>
+      <Helmet>
+        <title>About Us | MIENEBI International School</title>
+        <meta name="description" content="Discover MIENEBI International School: vision, mission, leadership, and world-class facilities in Abuja." />
+        <meta property="og:title" content="About Us | MIENEBI International School" />
+      </Helmet>
       {/* Hero Section */}
       <section className="bg-primary text-primary-foreground py-20 lg:py-28 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
@@ -146,6 +153,8 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      <StaffSection />
 
       {/* Principal's Message */}
       <section className="py-20 lg:py-28 bg-background">

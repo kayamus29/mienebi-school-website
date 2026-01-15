@@ -4,6 +4,7 @@ import { ArrowRight, BookOpen, GraduationCap, Trophy, Calendar, Download } from 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Helmet } from "react-helmet-async";
 
 const grades = [
   { level: "Pre-Primary", classes: ["Nursery", "LKG", "UKG"], ages: "3-5 years" },
@@ -29,6 +30,11 @@ const achievements = [
 const Academics = () => {
   return (
     <Layout>
+      <Helmet>
+        <title>Academics | MIENEBI International School</title>
+        <meta name="description" content="Explore academics at MIENEBI International School: British & Nigerian curriculum, departments, and academic excellence." />
+        <meta property="og:title" content="Academics | MIENEBI International School" />
+      </Helmet>
       {/* Hero Section */}
       <section className="bg-primary text-primary-foreground py-20 lg:py-28 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
@@ -44,10 +50,10 @@ const Academics = () => {
               <span className="text-sm font-medium">Academics</span>
             </div>
             <h1 className="font-serif text-4xl lg:text-5xl xl:text-6xl font-bold mb-6">
-              Academic Excellence at Every Level
+              Academic Excellence at MIENEBI International School Abuja
             </h1>
             <p className="text-lg text-primary-foreground/80 leading-relaxed">
-              Our comprehensive curriculum is designed to challenge and inspire students,
+              At MIENEBI International School, our comprehensive curriculum is designed to challenge and inspire students,
               fostering a love for learning that lasts a lifetime.
             </p>
           </div>
@@ -59,10 +65,10 @@ const Academics = () => {
         <div className="container">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <h2 className="font-serif text-3xl lg:text-4xl font-bold text-primary mb-4">
-              Our Academic Programs
+              MIENEBI International School Academic Programs
             </h2>
             <p className="text-muted-foreground text-lg">
-              From early childhood to senior secondary, we offer a structured
+              From early childhood to senior secondary, MIENEBI International School offers a structured
               curriculum that builds a strong foundation for future success.
             </p>
           </div>
@@ -75,7 +81,7 @@ const Academics = () => {
                     <GraduationCap className="h-6 w-6 text-secondary" />
                   </div>
                   <CardTitle className="font-serif text-xl">{grade.level}</CardTitle>
-                  <CardDescription>Ages: {grade.ages}</CardDescription>
+                  <CardDescription>Ages: {grade.ages} at MIENEBI International School</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="flex flex-wrap gap-2">
@@ -103,36 +109,24 @@ const Academics = () => {
               Curriculum Overview
             </h2>
             <p className="text-muted-foreground text-lg">
-              A balanced curriculum covering core subjects, electives, and
-              specialized streams for senior students.
+              We offer a blend of the British and Nigerian curriculum, preparing our students for both local and international opportunities. Our curriculum is approved by WAEC and NECO.
             </p>
           </div>
 
-          <Tabs defaultValue="core" className="max-w-4xl mx-auto">
-            <TabsList className="grid w-full grid-cols-3 mb-8">
-              <TabsTrigger value="core" className="font-medium">Core Subjects</TabsTrigger>
-              <TabsTrigger value="electives" className="font-medium">Electives</TabsTrigger>
-              <TabsTrigger value="specializations" className="font-medium">Specializations</TabsTrigger>
-            </TabsList>
-            
-            {Object.entries(subjects).map(([key, items]) => (
-              <TabsContent key={key} value={key}>
-                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {items.map((subject, index) => (
-                    <div
-                      key={index}
-                      className="bg-card rounded-xl p-6 flex items-center gap-4 shadow-card"
-                    >
-                      <div className="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center shrink-0">
-                        <BookOpen className="h-5 w-5 text-secondary" />
-                      </div>
-                      <span className="font-medium text-foreground">{subject}</span>
-                    </div>
-                  ))}
-                </div>
-              </TabsContent>
-            ))}
-          </Tabs>
+          <div className="grid sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
+            <div className="bg-card rounded-xl p-6 flex items-center gap-4 shadow-card">
+              <div className="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center shrink-0">
+                <BookOpen className="h-5 w-5 text-secondary" />
+              </div>
+              <span className="font-medium text-foreground">British Curriculum at MIENEBI International School</span>
+            </div>
+            <div className="bg-card rounded-xl p-6 flex items-center gap-4 shadow-card">
+              <div className="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center shrink-0">
+                <BookOpen className="h-5 w-5 text-secondary" />
+              </div>
+              <span className="font-medium text-foreground">Nigerian Curriculum (WAEC & NECO Approved) at MIENEBI International School</span>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -143,13 +137,13 @@ const Academics = () => {
             <div>
               <div className="inline-flex items-center gap-2 bg-secondary/10 text-secondary-foreground px-4 py-2 rounded-full mb-6">
                 <Trophy className="h-4 w-4" />
-                <span className="text-sm font-medium">Achievements</span>
+                <span className="text-sm font-medium">MIENEBI International School Achievements</span>
               </div>
               <h2 className="font-serif text-3xl lg:text-4xl font-bold text-primary mb-6">
-                Our Students Excel
+                MIENEBI International School Students Excel
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                Year after year, our students demonstrate excellence in academics,
+                Year after year, MIENEBI International School students demonstrate excellence in academics,
                 sports, and extracurricular activities, making us proud with their
                 achievements at regional, national, and international levels.
               </p>
@@ -181,7 +175,7 @@ const Academics = () => {
                   </div>
                   <div>
                     <h3 className="font-serif text-lg font-bold text-primary mb-1">
-                      {achievement.title}
+                      {achievement.title} at MIENEBI International School
                     </h3>
                     <p className="text-muted-foreground text-sm">
                       {achievement.description}
@@ -200,15 +194,15 @@ const Academics = () => {
           <div className="max-w-4xl mx-auto text-center">
             <Calendar className="h-12 w-12 mx-auto mb-6 text-secondary" />
             <h2 className="font-serif text-3xl lg:text-4xl font-bold mb-4">
-              Academic Calendar 2025-26
+              MIENEBI International School Academic Calendar 2025-26
             </h2>
             <p className="text-primary-foreground/70 mb-8 max-w-2xl mx-auto">
-              Plan ahead with our comprehensive academic calendar. Download the
+              Plan ahead with our comprehensive academic calendar at MIENEBI International School. Download the
               complete schedule including holidays, exams, and important events.
             </p>
             <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold shadow-gold">
               <Download className="mr-2 h-5 w-5" />
-              Download Academic Calendar
+              Download MIENEBI Academic Calendar
             </Button>
           </div>
         </div>
@@ -219,15 +213,15 @@ const Academics = () => {
         <div className="container">
           <div className="text-center max-w-2xl mx-auto">
             <h2 className="font-serif text-3xl lg:text-4xl font-bold text-primary mb-6">
-              Start Your Academic Journey
+              Start Your Academic Journey at MIENEBI International School
             </h2>
             <p className="text-muted-foreground text-lg mb-8">
-              Join Bright Horizon Academy and experience academic excellence
+              Join MIENEBI International School and experience academic excellence
               combined with holistic development.
             </p>
             <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold shadow-gold">
               <Link to="/admissions">
-                Apply for Admission
+                Apply for Admission to MIENEBI International School
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>

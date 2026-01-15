@@ -14,11 +14,11 @@ const CTASection = () => {
           <div className="relative z-10 text-center max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl lg:text-4xl xl:text-5xl font-bold text-primary-foreground mb-6">
               Begin Your Child's Journey to{" "}
-              <span className="text-secondary">Excellence</span>
+              <span className="text-secondary">Excellence</span> at MIENEBI International School
             </h2>
             <p className="text-lg text-primary-foreground/80 mb-10 leading-relaxed">
-              Admissions are now open for the 2025-26 academic year. Give your
-              child the gift of quality education at Bright Horizon Academy. Join
+              Admissions are now open for the 2024/2025 academic year. Give your
+              child the gift of quality British and Nigerian education at MIENEBI International School in Gwarimpa Estate, FCT Abuja. Join
               our community of learners, leaders, and innovators.
             </p>
 
@@ -30,7 +30,7 @@ const CTASection = () => {
               >
                 <Link to="/admissions">
                   <FileText className="mr-2 h-5 w-5" />
-                  Apply Online
+                  Apply Online to MIENEBI International School
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </Button>
@@ -40,9 +40,9 @@ const CTASection = () => {
                 variant="outline"
                 className="border-2 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-semibold text-lg px-8"
               >
-                <a href="tel:+1234567890">
+                <a href="tel:08035983003">
                   <Phone className="mr-2 h-5 w-5" />
-                  Call Us: +1 (234) 567-890
+                  Call MIENEBI Admissions: 08035983003
                 </a>
               </Button>
             </div>
@@ -50,7 +50,7 @@ const CTASection = () => {
             {/* Trust Badges */}
             <div className="mt-12 pt-8 border-t border-primary-foreground/20 flex flex-wrap justify-center gap-8">
               {[
-                "CBSE Affiliated",
+                "WAEC and NECO Approved",
                 "ISO 9001:2015",
                 "Green School Award",
                 "Digital Campus",

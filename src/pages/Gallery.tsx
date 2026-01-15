@@ -10,6 +10,7 @@ import gallery3 from "@/assets/gallery-3.jpg";
 import gallery4 from "@/assets/gallery-4.jpg";
 import gallery5 from "@/assets/gallery-5.jpg";
 import gallery6 from "@/assets/gallery-6.jpg";
+import { Helmet } from "react-helmet-async";
 
 const galleryImages = [
   { id: 1, src: gallery1, alt: "Classroom learning", category: "Academic", featured: true },
@@ -39,6 +40,11 @@ const Gallery = () => {
 
   return (
     <Layout>
+      <Helmet>
+        <title>Gallery | MIENEBI International School</title>
+        <meta name="description" content="Explore the MIENEBI International School gallery: campus life, academics, sports, and events in Abuja." />
+        <meta property="og:title" content="Gallery | MIENEBI International School" />
+      </Helmet>
       {/* Hero Section */}
       <section className="bg-primary text-primary-foreground py-20 lg:py-28 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
@@ -54,10 +60,10 @@ const Gallery = () => {
               <span className="text-sm font-medium">Photo Gallery</span>
             </div>
             <h1 className="font-serif text-4xl lg:text-5xl xl:text-6xl font-bold mb-6">
-              Moments That Matter
+              MIENEBI International School Photo Gallery: Moments That Matter in Abuja
             </h1>
             <p className="text-lg text-primary-foreground/80 leading-relaxed">
-              Explore the vibrant life at Bright Horizon Academy through our
+              Explore the vibrant life at MIENEBI International School in Gwarimpa Estate, Abuja, through our
               collection of photos capturing learning, friendship, and growth.
             </p>
           </div>
@@ -99,7 +105,7 @@ const Gallery = () => {
                 <div className={`${image.featured && index < 3 ? "aspect-square" : "aspect-[4/3]"}`}>
                   <img
                     src={image.src}
-                    alt={image.alt}
+                    alt={`${image.alt} at MIENEBI International School Abuja`}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                 </div>
@@ -124,10 +130,10 @@ const Gallery = () => {
         <div className="container">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <h2 className="font-serif text-3xl lg:text-4xl font-bold text-primary mb-4">
-              Video Gallery
+              MIENEBI International School Video Gallery
             </h2>
             <p className="text-muted-foreground text-lg">
-              Watch videos from our events, activities, and campus life.
+              Watch videos from MIENEBI International School events, activities, and campus life.
             </p>
           </div>
 
@@ -144,7 +150,7 @@ const Gallery = () => {
                 </div>
                 <div className="p-4">
                   <h3 className="font-serif font-bold text-primary mb-1">
-                    {["Annual Day 2024", "Sports Championship", "Science Exhibition"][index]}
+                    {["MIENEBI Annual Day 2024", "MIENEBI Sports Championship", "MIENEBI Science Exhibition"][index]}
                   </h3>
                   <p className="text-sm text-muted-foreground">
                     {["Dec 15, 2024", "Nov 20, 2024", "Oct 10, 2024"][index]}
@@ -163,7 +169,7 @@ const Gallery = () => {
             {selectedImage && (
               <img
                 src={selectedImage.src}
-                alt={selectedImage.alt}
+                alt={`${selectedImage.alt} at MIENEBI International School Abuja`}
                 className="w-full h-auto rounded-xl"
               />
             )}
@@ -175,7 +181,7 @@ const Gallery = () => {
                 <span className="text-xs bg-secondary text-secondary-foreground px-2 py-1 rounded-full mr-2">
                   {selectedImage.category}
                 </span>
-                <span className="font-medium">{selectedImage.alt}</span>
+                <span className="font-medium">{`${selectedImage.alt} at MIENEBI International School Abuja`}</span>
               </div>
             )}
           </div>
@@ -187,11 +193,11 @@ const Gallery = () => {
         <div className="container">
           <div className="text-center max-w-2xl mx-auto">
             <h2 className="font-serif text-3xl lg:text-4xl font-bold mb-6">
-              Experience Campus Life
+              Experience MIENEBI International School Campus Life
             </h2>
             <p className="text-primary-foreground/70 text-lg mb-8">
               Want to see more? Schedule a campus visit and experience
-              Bright Horizon Academy firsthand.
+              MIENEBI International School firsthand.
             </p>
             <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold shadow-gold">
               <Link to="/contact">

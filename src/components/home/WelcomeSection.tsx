@@ -11,7 +11,7 @@ const WelcomeSection = () => {
             <div className="relative z-10">
               <img
                 src={principalImage}
-                alt="Dr. Sarah Mitchell, Principal of Bright Horizon Academy"
+                alt="Head of School at MIENEBI International School in Gwarimpa Estate, Abuja"
                 className="w-full max-w-md mx-auto lg:mx-0 rounded-2xl shadow-elegant"
               />
               {/* Experience Badge */}
@@ -32,25 +32,18 @@ const WelcomeSection = () => {
             </div>
             
             <h2 className="font-serif text-3xl lg:text-4xl xl:text-5xl font-bold text-primary mb-6 leading-tight">
-              Welcome to Bright Horizon Academy
+              Welcome to MIENEBI International School
             </h2>
 
             <div className="relative mb-6">
               <Quote className="absolute -top-4 -left-4 h-12 w-12 text-secondary/30" />
               <p className="text-lg text-muted-foreground leading-relaxed pl-8 italic">
-                Education is not just about filling minds with knowledge; it's
-                about igniting curiosity, fostering creativity, and building
-                character. At Bright Horizon Academy, we are committed to
-                nurturing the whole child.
+                Welcome to the 2024/2025 academic session at MIENEBI International School! This year, we are placing a special emphasis on practical learning to ensure our students are not just learning, but are also able to apply their knowledge in real-world scenarios, preparing them to be future leaders.
               </p>
             </div>
 
             <p className="text-muted-foreground leading-relaxed mb-6">
-              Our dedicated faculty, state-of-the-art facilities, and innovative
-              curriculum work together to provide an environment where every
-              student can thrive. We believe in developing not just academic
-              excellence, but also the social, emotional, and physical well-being
-              of our students.
+              Our dedicated faculty, state-of-the-art facilities in Gwarimpa Estate, FCT Abuja, and innovative British and Nigerian curriculum work together to provide an environment where every student can thrive. We believe in developing not just academic excellence, but also the social, emotional, and physical well-being of our students.
             </p>
 
             <p className="text-muted-foreground leading-relaxed mb-8">
@@ -63,10 +56,7 @@ const WelcomeSection = () => {
               <div className="w-16 h-0.5 bg-secondary" />
               <div>
                 <div className="font-serif text-xl font-bold text-primary">
-                  Dr. Sarah Mitchell
-                </div>
-                <div className="text-sm text-muted-foreground">
-                  Principal, Bright Horizon Academy
+                  Head of School
                 </div>
               </div>
             </div>
